@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="UTF-8">
+	<title>Nytt opplegg</title>
+	<link rel="stylesheet" href="nyttOpplegg.css">
+</head>
+<body>
+	<h1>Legg inn nytt opplegg</h1>
+	<a href="Undervisningsopplegg.html">Tilbake til hovedsiden</a>
+	<form action="Undervisningsopplegg.html" onsubmit="lastOppOpplegg()">
+		<input type="text" name="navn" placeholder="Skriv inn navn på opplegget" size="40" required id="navn" style="font-size: 14px"><br>
+		<!-- <input id="dagensDato" type="date" name="dato" size="8"><br>
+			<input id="brukernavn" type="text" name="bruker" value="bjal0703" size="8" readonly><br>-->
+			<textarea placeholder="Forklar opplegget" id="beskrivelse" name="beskrivelse" rows="4" cols="139" wrap="soft" required></textarea>
+			<fieldset>
+				<legend>Type</legend>
+				<div class="container">
+					<ul class="ks-cboxtags">
+						<li><input type="checkbox"  name="tag" id="checkbox1" value="Vurdering" ><label for="checkbox1">Vurdering</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox2" value="Lærerstyrt"><label for="checkbox2">Lærerstyrt</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox3" value="Fysisk"><label for="checkbox3">Fysisk</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox4" value="Digitalt"><label for="checkbox4">Digitalt</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox5" value="Forbredelser"><label for="checkbox5">Forbredelser</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox6" value="Hjemmearbeid"><label for="checkbox6">Hjemmearbeid</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox7" value="Lek"><label for="checkbox7">Lek</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox8" value="Spill"><label for="checkbox8">Spill</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox9" value="Tverrfagelig"><label for="checkbox9">Tverrfagelig</label></li>
+						<li><input type="checkbox"  name="tag" id="checkbox10" value="Uten lærer"><label for="checkbox10">Uten lærer</label></li>
+					</ul>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Antall elever</legend>
+				<div class="container">
+					<ul class="ks-cboxtags">
+						<li><input type="checkbox" name="tag" id="checkbox20" value="Individuelt"><label for="checkbox20">Individuelt</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox21" value="Par"><label for="checkbox21">Par</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox22" value="Gruppe"><label for="checkbox22">Gruppe</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox23" value="Flere klasser"><label for="checkbox23">Flere klasser</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox24" value="Liten gruppe"><label for="checkbox24">Liten gruppe</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox25" value="Stor gruppe"><label for="checkbox25">Stor gruppe</label></li>
+					</ul>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Tid</legend>
+				<div class="container">
+					<ul class="ks-cboxtags">
+						<li><input type="checkbox" name="tag" id="checkbox30" value="Kort tid"><label for="checkbox30">Kort tid</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox31" value="Middels tid"><label for="checkbox31">Middels tid</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox32" value="Lang tid"><label for="checkbox32">Lang tid</label></li>
+					</ul>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Sted</legend>
+				<div class="container">
+					<ul class="ks-cboxtags">
+						<li><input type="checkbox" name="tag" id="checkbox40" value="Klasserom"><label for="checkbox40">Klasserom</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox41" value="Ute"><label for="checkbox41">Ute</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox42" value="Lab"><label for="checkbox42">Lab</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox43" value="Fellesareal"><label for="checkbox43">Fellesareal</label></li>
+					</ul>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Trenger</legend>
+				<div class="container">
+					<ul class="ks-cboxtags">
+						<li><input type="checkbox" name="tag" id="checkbox50" value="PC/mac"><label for="checkbox50">PC/mac</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox51" value="Mobil"><label for="checkbox51">Mobil</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox52" value="Internett"><label for="checkbox52">Internett</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox53" value="Printing"><label for="checkbox53">Printing</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox54" value="Smartboard"><label for="checkbox54">Smartboard</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox55" value="Innkjop"><label for="checkbox55">Innkjøp</label></li>
+					</ul>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Hensikt</legend>
+				<div class="container">
+					<ul class="ks-cboxtags">
+						<li><input type="checkbox" name="tag" id="checkbox60" value="Bli kjent"><label for="checkbox60">Bli kjent</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox61" value="Roer ned"><label for="checkbox61">Roer ned</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox62" value="Aktiverer"><label for="checkbox62">Aktiverer</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox63" value="Oppstart"><label for="checkbox63">Oppstart</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox64" value="Oppsummering"><label for="checkbox64">Oppsummering</label></li>
+						<li><input type="checkbox" name="tag" id="checkbox65" value="Prøve/eksamen"><label for="checkbox65">Prøve/eksamen</label></li>
+					</ul>
+				</div>
+			</fieldset>
+			<input type="submit" id="submit" value="Lagre opplegg">
+
+
+		</form>
+		<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+	<script>
+// Your web app's Firebase configuration
+const firebaseConfig = {
+	apiKey: "AIzaSyCj1pKt9c4asPPmHw3YGcbz8ncZRBVqDYc",
+	authDomain: "undervisningsopplegg-f15fa.firebaseapp.com",
+	databaseURL: "https://undervisningsopplegg-f15fa.firebaseio.com",
+	projectId: "undervisningsopplegg-f15fa",
+	storageBucket: "undervisningsopplegg-f15fa.appspot.com",
+	messagingSenderId: "531861485673",
+	appId: "1:531861485673:web:37d0d1ec182a4c235fcaf8",
+	measurementId: "G-JFN7BXQY60"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database();
+var opplegg = database.ref("opplegg");
+
+</script>
+<script>
+
+	function hentValgte(){
+		var items=document.getElementsByName('tag');
+		let selectedItems = [];
+		for(var z=0; z<items.length; z++){
+			if(items[z].type=='checkbox' && items[z].checked==true){
+				selectedItems.push(items[z].value);
+			}
+		}
+		return selectedItems;
+	}		
+
+	function lastOppOpplegg() {
+		n =  new Date();
+		y = n.getFullYear();
+		m = n.getMonth() + 1;
+		d = n.getDate();
+		if (d<10) {
+			d = "0"+d
+		}
+		if (m<10) {
+			d = "0"+d
+		}
+		var dagensDato = d + "." + m + "." + y;
+
+		opplegg.push().set({navn: document.getElementById("navn").value ,dato: `${dagensDato}`, bruker: "bjal0703", tags: hentValgte(), beskrivelse: document.getElementById("beskrivelse").value, vises: true});	
+	}
+
+		// TODO sett bruker til riktig navn
+		//document.getElementById("brukernavn").value = ????;
+	</script>
+
+</body>
+</html>

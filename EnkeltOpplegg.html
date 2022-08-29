@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="EnkeltOpplegg_styles.css">
+</head>
+<body>
+  <header>
+    <article id="ugle"><img src="ugle.jpg" width=150px;></article>
+    <article id="ugle"><img src="ugle.jpg" width=150px;></article>
+    <article><a href="Undervisningsopplegg.html">Tilbake til alle opplegg</a></article>
+    <article>Informasjon <a href="nyttOpplegg.html">Legg inn nytt opplegg</a></article>
+    <article>Logg inn</article>
+  </header>
+ <!-- <main>
+    <article id="navn">Navn</article>
+    <article id="likes">Likes</article>
+    <article id="brukerOgDato">Bruker og dato</article>
+    <article>Beskrivelse</article>
+    <article>Tags</article>
+    <article>Rediger</article>
+    <article>Kommentarer</article>
+  </main>-->
+
+<div class="container">
+    <!--Her legges alt fra firebase inn-->
+    <main id="innholdet"></main>
+  </div>
+
+
+    
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script> 
+
+      <script>
+
+        //window.onload = alert(localStorage.getItem("opplegget"));
+  	// Your web app's Firebase configuration
+  	var firebaseConfig = {
+  		apiKey: "AIzaSyCj1pKt9c4asPPmHw3YGcbz8ncZRBVqDYc",
+  		authDomain: "undervisningsopplegg-f15fa.firebaseapp.com",
+  		databaseURL: "https://undervisningsopplegg-f15fa.firebaseio.com",
+  		projectId: "undervisningsopplegg-f15fa",
+  		storageBucket: "undervisningsopplegg-f15fa.appspot.com",
+  		messagingSenderId: "531861485673",
+  		appId: "1:531861485673:web:37d0d1ec182a4c235fcaf8",
+  		measurementId: "G-JFN7BXQY60"
+  	};
+  	// Initialize Firebase
+  	firebase.initializeApp(firebaseConfig);
+
+    var database = firebase.database();
+    var opplegg = database.ref("opplegg");
+  </script>
+  <script>
+    var i = 0;
+    function visOpplegg(snap){
+      ++i;
+      var pk = snap.key;
+      var opplegg = snap.val();
+      var tagger ="";
+
+      for (j=0; j<opplegg.tags.length; j++){
+        tagger += `<button type="button" class="checkboxes">${opplegg.tags[j]}</button>`;
+      }
+      var liste = [`<article class="navn">${opplegg.navn}</article>`, `<article class="tags">${tagger}</article>`, `<article class="beskrivelse">${opplegg.beskrivelse}</article>`, `<article class="info">Antall likes: ${opplegg.likes} <img src="TommelOppTom.svg" id="${"tommel" + i}" onclick="switchImg(this.id)" width="50px;" align= "right"> <br>Lagt til: ${opplegg.dato} av ${opplegg.bruker}</article>`];
+      var forste = liste.map(n => n);
+      var fors = `<section class="forhandsvisning_undervisningsopplegg">` + forste.join('') + '</section>';
+      document.getElementById(`innholdet`).innerHTML += fors;
+
+    }
+
+    var x = 1; //initializes counter
+    function switchImg(iden) {
+       if (x == 1) { //if the counter is at 1
+           document.getElementById(iden).src = "TommelOppFylt.svg";
+           x++; //increments the counter to 2
+        } else if (x == 2) { //if this is the 2nd click
+           document.getElementById(iden).src = "TommelOppTom.svg";
+           x = 1; //resets counter to 1
+        }
+    }
+
+    opplegg.on("child_added", visOpplegg);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+header{
+	display: grid;
+	grid-template-columns: 30% 60% 10%;
+	grid-template-rows: 130px;
+	grid-row-gap: 5px;
+	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+}
+
+aside{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 30px 30px;
+	grid-row-gap: 5px;
+	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+
+}
+
+main{
+	/*display: grid;*/
+	grid-row-gap: 20px;
+	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+}
+body {
+	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+}
+
+article{
+	padding: 0px;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.forhandsvisning_undervisningsopplegg > article {
+	grid-gap: 15px;	
+	background-color: #d0d1d8;
+}
+#ugle{
+
+}
+
+.container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+.navn{
+	font-size: 25px;
+	font-weight: bold;
+	grid-column: 1/2;
+	grid-row: 1/2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 4px;
+}
+
+.info{
+	grid-column: 1/2;
+	grid-row: 2/4;
+	margin: 4px;
+}
+.tags{
+	margin-right: 2px;
+	grid-column: 2/3;
+	grid-row: 1/2;
+	margin: 4px;
+}
+.beskrivelse{
+	grid-column: 2/3;
+	grid-row: 2/4;
+	margin-right: 2px;
+	margin: 4px;
+}
+
+.forhandsvisning_undervisningsopplegg{
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 30% 45% 25%;
+	max-height: 200px;
+	min-height: 120px;
+	grid-gap: 2px;
+	background: linear-gradient(to right, #c0c1c8, #c0c1c8);
+	text-overflow: ellipsis;
+}
+
+.checkboxes{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: #555555;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.checkboxes::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    transition: transform .3s ease-in-out;
+}
+
+.checkboxes input[type="checkbox"]:checked{
+    transition: transform .3s ease-in-out;
+}
+
+.checkboxes input[type="checkbox"]:checked {
+    border: 2px solid #1bdbf8;
+    background-color: #12bbd4;
+    color: #fff;
+    transition: all .2s;
+}
+
+.checkboxes input[type="checkbox"] {
+  display: absolute;
+  position: absolute;
+  opacity: 0;
+}
+.checkboxes input[type="checkbox"]:focus {
+  border: 2px solid #e9a1ff;
+}
+
+
+
+
