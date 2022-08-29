@@ -1,9 +1,9 @@
 header{
 	display: grid;
-	grid-template-columns: 30% 60% 10%;
+	grid-template-columns: 50% 40% 10%;
 	grid-template-rows: 130px;
 	grid-row-gap: 5px;
-	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+	background: linear-gradient(to right, #FFFFFF, #FFFFF0);
 }
 
 aside{
