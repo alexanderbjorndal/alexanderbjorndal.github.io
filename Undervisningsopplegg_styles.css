@@ -11,17 +11,17 @@ aside{
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 30px 30px;
 	grid-row-gap: 5px;
-	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+	background: linear-gradient(to right, #FFFFFF, #FFFFF0);
 
 }
 
 main{
 	/*display: grid;*/
 	grid-row-gap: 20px;
-	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+	background: linear-gradient(to right, #FFFFFF, #FFFFF0);
 }
 body {
-	background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+	background: linear-gradient(to right, #FFFFFF, #FFFFF0);
 }
 
 article{

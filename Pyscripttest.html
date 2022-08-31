@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+	<script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+	<py-env>
+		paths
+			./test.py
+	</py-env>
+</head>
+<body>
+	<a href="Undervisningsopplegg.html">Til hovedsiden</a>
+	<div id="plot"></div>
+	<py-script output="plot" src="test.py">
+	</py-script>
+	<div id="hei"></div>
+	<py-script output="hei" src="./test.py">
+	import test
+	test2(12222)
+	</py-script>
+
+	<!--<h1><b>pyscript REPL</b></h1>
+	Tip: press Shift-ENTER to evaluate a cell
+	<br>
+	<div>
+		<py-repl id="my-repl" auto-generate="true"></py-repl>
+	</div>
+-->
+
+</body>
+</html>
+
