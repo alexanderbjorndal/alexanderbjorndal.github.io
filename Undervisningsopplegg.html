@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Undervisningsopplegg</title>
+	<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+	<script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
 	<link rel="stylesheet" href="Undervisningsopplegg_styles.css">
 	<script src="Undervisningsopplegg_JS.js"></script>
 </head>
@@ -22,16 +24,7 @@
 		<article>Logg inn</article>
 	</header>
 	<aside>
-		<article>Navn</article>
-		<article>Dato</article>
-		<article>Min tid</article>
-		<article>Maks tid</article>
-		<article>Beskrivelse</article>
-		<article><input type="text" name="navnSok" value="Søk på navn"></article>
-		<article><input type="text" name="datoSok" value="Søk på dato"></article>
-		<article><input type="text" name="minTidSok" value="Søk på min tid"></article>
-		<article><input type="text" name="maksTidSok" value="Søk på maks tid"></article>
-		<article><input type="text" name="beskrivelseSok" value="Søk på beskrivelse"></article>
+		<article><input type="text" name="soke" value="Skriv for å søke"></article>
 	</aside>
 	
 	<div class="container">
@@ -124,5 +117,12 @@ function aapneOpplegg(iden) {
 }
 
 </script>
+
+<py-script>
+	def pr():
+		print("Hello World")
+	pr()
+</py-script>
+
 </body>
 </html>

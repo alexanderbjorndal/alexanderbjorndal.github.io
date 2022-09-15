@@ -1,7 +1,14 @@
-def test2(x):
-	print(x)
+from firebase import firebase
 
-for i in range(10):
-	test2(i)
+FBConn = firebase.FirebaseApplication('https://undervisningsopplegg-f15fa.firebaseio.com/', None)
 
-test2(92348091348)
+while True:
+	temperature = int(input("What is the temperature? "))
+
+	data_to_upload = {
+		'Temp' : temperature
+	}
+	
+	result = FBConn.post('/MyTestData', data_to_upload)
+
+	print(result)
